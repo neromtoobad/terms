@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+logs/*
+!logs/.gitkeep
+data/runtime*/
+web/dist/
+.world/
+*.pem
+*.key
+secrets/
+credentials/
+.DS_Store

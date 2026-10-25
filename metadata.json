@@ -1,0 +1,31 @@
+{
+  "project": "Terms",
+  "tagline": "The trade-credit desk that learns from its decisions",
+  "track": "Reasoning Architecture",
+  "team": "nerom",
+  "entry_points": {
+    "http": "POST /run  {\"input\":{\"query\":\"Run the weekly credit review\"}}",
+    "cli": "npx tsx src/cli.ts input_examples/example_1.json",
+    "scenario": "npx tsx scripts/scenario.ts",
+    "ui": "http://localhost:8010"
+  },
+  "sponsor_technology": {
+    "zetaris": {
+      "role": "Single data layer: 32 Lightning REST tables straight to data.sec.gov (8 customers x 4 XBRL concepts) plus the seller's 4 systems, all CACHE TABLE'd, flattened into 8 SchemaStore views; federated joins (ERP x SEC revenue, assets x liabilities, ledger x customer master). Every decision cites Zetaris query ids.",
+      "code": ["src/sources.ts", "src/adapters/zetaris.ts", "src/data.ts", "scripts/zetaris-setup.ts"]
+    },
+    "meterless": {
+      "engines": {
+        "scout_intent": { "role": "Intake: registry, lexical scoring, Guard (injection, forbidden actions, unverified authority claims), HMAC-signed ExecutionContract carrying the desk's authority; verified before every query and every desk change; refreshed per Markovian step", "code": ["src/agents/intake.ts", "src/data.ts", "src/agents/executor.ts"] },
+        "hmem": { "role": "Decision and outcome memory with provenance (decision id + Zetaris query ids); recalled per account before underwriting", "code": ["src/agents/archivist.ts", "engines/hmem"] },
+        "world_model": { "role": "Case file: accounts, policy conditions, decisions evidenced_by queries, execution facts; single-writer queue", "code": ["src/agents/archivist.ts", "engines/world-model"] },
+        "markovian": { "role": "Portfolio review in bounded steps of two accounts; carryover = exposure ledger for POL-11", "code": ["src/run.ts", "engines/markovian"] }
+      },
+      "runtime": { "role": "Nightshift is the primary AI provider (Meterless Runtime 0.90.0 contract)", "code": ["src/adapters/meterless.ts", "src/brain.ts"] },
+      "tests": "npm test (8 Terms feature tests + 30 engine conformance tests)"
+    },
+    "nvidia": { "role": "Nemotron 3 Ultra 550B underwrites every account (deep lane); Nemotron 3.5 Lightning 30B binds request parameters (fast lane); served by Nightshift", "code": ["src/agents/underwriter.ts", "src/brain.ts"] },
+    "coding_tool": "Claude Code (Cursor became optional on Oct 22)"
+  },
+  "data": { "public": "SEC EDGAR XBRL company facts (real, live via Zetaris)", "simulated": "Halden Packaging seller ledger (scripts/gen-ledger.ts); Halden is fictional" }
+}

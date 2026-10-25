@@ -1,0 +1,12 @@
+{
+ "sql": "SELECT COUNT(*) AS n FROM terms.collections_notes",
+ "columns": [
+  "n"
+ ],
+ "rows": [
+  [
+   "15"
+  ]
+ ],
+ "recordedAt": "2026-10-25T12:30:35.074Z"
+}

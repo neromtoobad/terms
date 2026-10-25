@@ -1,0 +1,72 @@
+{
+ "sql": "SELECT ticker, frame, period_end, value_usd AS net_income_usd FROM terms.sec_net_income WHERE ticker IN ('BBWI', 'DKS') AND length(frame) = 8 AND period_end >= '2025-01-01' AND filed <= '2026-10-19' ORDER BY ticker, period_end",
+ "columns": [
+  "ticker",
+  "frame",
+  "period_end",
+  "net_income_usd"
+ ],
+ "rows": [
+  [
+   "BBWI",
+   "CY2025Q1",
+   "2025-05-03",
+   "1.05E8"
+  ],
+  [
+   "BBWI",
+   "CY2025Q2",
+   "2025-08-02",
+   "6.4E7"
+  ],
+  [
+   "BBWI",
+   "CY2025Q3",
+   "2025-11-01",
+   "7.7E7"
+  ],
+  [
+   "BBWI",
+   "CY2026Q1",
+   "2026-05-02",
+   "1.83E8"
+  ],
+  [
+   "BBWI",
+   "CY2026Q2",
+   "2026-08-01",
+   "1.18E8"
+  ],
+  [
+   "DKS",
+   "CY2025Q1",
+   "2025-05-03",
+   "2.64288E8"
+  ],
+  [
+   "DKS",
+   "CY2025Q2",
+   "2025-08-02",
+   "3.81402E8"
+  ],
+  [
+   "DKS",
+   "CY2025Q3",
+   "2025-11-01",
+   "7.5212E7"
+  ],
+  [
+   "DKS",
+   "CY2026Q1",
+   "2026-05-02",
+   "3.19822E8"
+  ],
+  [
+   "DKS",
+   "CY2026Q2",
+   "2026-08-01",
+   "3.15461E8"
+  ]
+ ],
+ "recordedAt": "2026-10-25T13:06:42.978Z"
+}

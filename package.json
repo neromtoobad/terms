@@ -1,0 +1,38 @@
+{
+  "name": "terms",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Terms: an AI trade-credit desk. Decides how much credit to give each business customer from real SEC filings (via Zetaris) and the seller's ledger, acts within signed authority, and learns from how its decisions turned out.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "dev": "tsx watch src/server.ts",
+    "run": "tsx src/cli.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "web:dev": "vite --config web/vite.config.ts",
+    "web:build": "vite build --config web/vite.config.ts",
+    "build": "npm run web:build"
+  },
+  "dependencies": {
+    "@duckdb/node-api": "^1.4.1-r.1",
+    "@hono/node-server": "^1.13.7",
+    "hono": "^4.6.14"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

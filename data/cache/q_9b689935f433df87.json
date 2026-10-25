@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE LIGHTNING REST TABLE dks_liabilitiescurrent_raw FROM TERMS_SEC REQUEST(endpoint \"https://data.sec.gov/api/xbrl/companyconcept/CIK0001089063/us-gaap/LiabilitiesCurrent.json\", method \"get\", response_type \"json\", http_encoding \"URLENCODED\") HEADER (user-agent \"Terms-hackathon-demo admin@nerom.site\") BODY ()",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:30:13.087Z"
+}

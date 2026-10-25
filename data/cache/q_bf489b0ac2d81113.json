@@ -1,0 +1,12 @@
+{
+ "sql": "SELECT COUNT(*) AS n FROM terms.sec_liabilities_current",
+ "columns": [
+  "n"
+ ],
+ "rows": [
+  [
+   "503"
+  ]
+ ],
+ "recordedAt": "2026-10-25T12:30:31.867Z"
+}

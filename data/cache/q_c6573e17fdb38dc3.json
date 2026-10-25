@@ -1,0 +1,8 @@
+{
+ "sql": "CACHE TABLE terms_sec.aap_liabilitiescurrent_raw",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:30:07.229Z"
+}

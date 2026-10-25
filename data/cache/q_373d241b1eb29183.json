@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE SCHEMASTORE VIEW invoices WITH CONTAINER terms AS SELECT r.as_of AS as_of, r.invoice_id AS invoice_id, r.ticker AS ticker, r.issue_date AS issue_date, r.due_date AS due_date, CAST(r.amount_usd AS DOUBLE) AS amount_usd, r.paid_date AS paid_date, CAST(r.paid_usd AS DOUBLE) AS paid_usd, CAST(r.disputed AS BIGINT) AS disputed FROM halden_systems.invoices_src LATERAL VIEW explode(records) AS r",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:30:19.485Z"
+}

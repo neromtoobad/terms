@@ -1,0 +1,8 @@
+{
+ "sql": "CACHE TABLE terms_sec.dks_netincomeloss_raw",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:29:36.477Z"
+}

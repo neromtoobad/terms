@@ -1,0 +1,112 @@
+{
+ "system": "collections_notes",
+ "generated": "scripts/gen-ledger.ts",
+ "simulated": true,
+ "records": [
+  {
+   "as_of": "2026-10-19",
+   "note_date": "2026-09-08",
+   "ticker": "W",
+   "category": "risk",
+   "note": "July invoice paid 24 days late. AP contact cited a cash management review."
+  },
+  {
+   "as_of": "2026-10-19",
+   "note_date": "2026-10-14",
+   "ticker": "W",
+   "category": "contact",
+   "note": "Wayfair AP: August and September invoices on hold pending 'cash management review'; no payment date given."
+  },
+  {
+   "as_of": "2026-10-19",
+   "note_date": "2026-10-10",
+   "ticker": "KSS",
+   "category": "dispute",
+   "note": "Kohl's disputes $18,400 of the September 7 invoice: damaged pallets at the Ohio DC. Photos requested."
+  },
+  {
+   "as_of": "2026-10-19",
+   "note_date": "2026-10-16",
+   "ticker": "AAP",
+   "category": "contact",
+   "note": "AAP buyer asks for more headroom for Q4 store resets; order SO-4488 pending."
+  },
+  {
+   "as_of": "2026-10-19",
+   "note_date": "2026-10-15",
+   "ticker": "DKS",
+   "category": "contact",
+   "note": "DKS is integrating the Foot Locker banners and asks for an $800,000 limit for Q4 fixtures."
+  },
+  {
+   "as_of": "2026-10-19",
+   "note_date": "2026-10-12",
+   "ticker": "TGT",
+   "category": "contact",
+   "note": "Target confirms Q4 display program volumes in line with last year."
+  },
+  {
+   "as_of": "2026-10-26",
+   "note_date": "2026-09-08",
+   "ticker": "W",
+   "category": "risk",
+   "note": "July invoice paid 24 days late. AP contact cited a cash management review."
+  },
+  {
+   "as_of": "2026-10-26",
+   "note_date": "2026-10-14",
+   "ticker": "W",
+   "category": "contact",
+   "note": "Wayfair AP: August and September invoices on hold pending 'cash management review'; no payment date given."
+  },
+  {
+   "as_of": "2026-10-26",
+   "note_date": "2026-10-10",
+   "ticker": "KSS",
+   "category": "dispute",
+   "note": "Kohl's disputes $18,400 of the September 7 invoice: damaged pallets at the Ohio DC. Photos requested."
+  },
+  {
+   "as_of": "2026-10-26",
+   "note_date": "2026-10-16",
+   "ticker": "AAP",
+   "category": "contact",
+   "note": "AAP buyer asks for more headroom for Q4 store resets; order SO-4488 pending."
+  },
+  {
+   "as_of": "2026-10-26",
+   "note_date": "2026-10-15",
+   "ticker": "DKS",
+   "category": "contact",
+   "note": "DKS is integrating the Foot Locker banners and asks for an $800,000 limit for Q4 fixtures."
+  },
+  {
+   "as_of": "2026-10-26",
+   "note_date": "2026-10-12",
+   "ticker": "TGT",
+   "category": "contact",
+   "note": "Target confirms Q4 display program volumes in line with last year."
+  },
+  {
+   "as_of": "2026-10-26",
+   "note_date": "2026-10-23",
+   "ticker": "W",
+   "category": "contact",
+   "note": "Wayfair paid the August invoice (63 days late) after the order hold was escalated. September invoice still open."
+  },
+  {
+   "as_of": "2026-10-26",
+   "note_date": "2026-10-24",
+   "ticker": "AAP",
+   "category": "promise_to_pay",
+   "note": "AAP AP team: payment run delayed by their ERP migration; expects to pay the Sept 25 invoice by Oct 31. Buyer placed SO-4530 meanwhile."
+  },
+  {
+   "as_of": "2026-10-26",
+   "note_date": "2026-10-24",
+   "ticker": "KSS",
+   "category": "dispute",
+   "note": "Kohl's paid the September 7 invoice short by the disputed $18,400; dispute still open."
+  }
+ ]
+}

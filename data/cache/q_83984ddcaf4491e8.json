@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE LIGHTNING DATABASE TERMS_SEC DESCRIBE BY \"SEC EDGAR XBRL company facts for Halden customers\"",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:24:46.778Z"
+}

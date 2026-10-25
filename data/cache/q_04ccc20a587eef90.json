@@ -1,0 +1,21 @@
+{
+ "sql": "SELECT ticker, COUNT(*) AS n, MAX(frame) AS last FROM terms.probe_union2 GROUP BY ticker",
+ "columns": [
+  "ticker",
+  "n",
+  "last"
+ ],
+ "rows": [
+  [
+   "TGT",
+   "40",
+   "CY2026Q2"
+  ],
+  [
+   "WMT",
+   "85",
+   "CY2026Q2"
+  ]
+ ],
+ "recordedAt": "2026-10-25T12:25:24.859Z"
+}

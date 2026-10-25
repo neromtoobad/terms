@@ -1,0 +1,1 @@
+{ "input": { "query": "Run the weekly credit review" }, "note": "Week 2: run after POST /api/desk/advance (scripts/scenario.ts does the whole sequence)" }

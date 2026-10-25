@@ -1,0 +1,24 @@
+{
+  "name": "Halden Packaging credit policy",
+  "version": "2026.10",
+  "owner": "Halden credit manager",
+  "note": "Halden Packaging is fictional; this policy is written for the Terms demo. Every desk decision must cite the clauses it relies on.",
+  "clauses": [
+    { "id": "POL-1", "title": "Limit ceiling", "text": "No customer limit above $2,000,000, and never above 1% of the customer's latest quarterly revenue as reported to the SEC." },
+    { "id": "POL-2", "title": "Desk authority", "text": "The desk may lower limits, hold orders, and release orders within the available limit on its own. It may raise a limit by up to $250,000, to at most $1,000,000, on its own. Anything larger needs the credit manager's approval." },
+    { "id": "POL-3", "title": "Severe delinquency", "text": "If any undisputed invoice is more than 60 days past due, hold every new order until that invoice is paid." },
+    { "id": "POL-4", "title": "Loss-making customers", "text": "If net income was negative in two or more of the customer's last three reported quarters, the limit may not be increased." },
+    { "id": "POL-5", "title": "Liquidity stress", "text": "A current ratio below 1.0 together with a loss in the latest quarter means new orders need prepayment, or the limit is cut by at least 25%." },
+    { "id": "POL-6", "title": "Increase eligibility", "text": "A limit may rise by up to 25% when, over the last six months, the customer paid on average no more than 5 days late, utilisation is at least 80%, latest-quarter revenue is no more than 3% below the same quarter last year, the latest quarter was profitable, and no invoice is more than 30 days past due." },
+    { "id": "POL-7", "title": "Disputes", "text": "Disputed amounts do not count as past due, but a dispute over $10,000 blocks any increase until it is resolved and must be named in the decision." },
+    { "id": "POL-8", "title": "Early warning after an increase", "text": "If, within 30 days of an increase, the customer is past due on any invoice and uses more than 90% of the new limit, revert the increase and hold new orders until the account is current." },
+    { "id": "POL-9", "title": "Evidence", "text": "Every decision cites the queries and clauses it relies on. A decision without evidence is not executed." },
+    { "id": "POL-10", "title": "Order release", "text": "An order may be released only when open receivables plus the order fit within the effective limit and no hold applies." },
+    { "id": "POL-11", "title": "Portfolio concentration", "text": "Limits on watch-list accounts (any POL-4 or POL-5 condition) may not exceed 30% of all credit limits." }
+  ],
+  "sector_notes": [
+    { "id": "SN-1", "title": "Big-box retail runs negative working capital", "applies_to": ["WMT", "TGT"], "text": "Big-box general merchandise and grocery retailers collect from shoppers before they pay suppliers, so a current ratio below 1.0 is normal for them. On its own it is not a distress signal for this sector." },
+    { "id": "SN-2", "title": "Acquired growth is not organic growth", "applies_to": ["DKS"], "text": "When revenue jumps more than 25% year on year because of an acquisition, judge the combined company on its payment behaviour, and raise exposure in stages with the credit manager's approval." },
+    { "id": "SN-3", "title": "Seasonal retail", "applies_to": ["KSS", "TGT", "WMT", "BBWI", "DKS"], "text": "Retail revenue peaks in the holiday quarter. Compare a quarter with the same quarter a year earlier, never with the quarter before." }
+  ]
+}

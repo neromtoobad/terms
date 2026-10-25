@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE SCHEMASTORE VIEW collections_notes WITH CONTAINER terms AS SELECT r.as_of AS as_of, r.note_date AS note_date, r.ticker AS ticker, r.category AS category, r.note AS note FROM halden_systems.collections_notes_src LATERAL VIEW explode(records) AS r",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:30:21.303Z"
+}

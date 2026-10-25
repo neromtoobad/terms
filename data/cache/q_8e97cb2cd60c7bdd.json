@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE LIGHTNING REST TABLE collections_notes_src FROM HALDEN_SYSTEMS REQUEST(endpoint \"http://host.docker.internal:8010/sources/collections_notes.json\", method \"get\", response_type \"json\", http_encoding \"URLENCODED\") HEADER () BODY ()",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:30:20.768Z"
+}

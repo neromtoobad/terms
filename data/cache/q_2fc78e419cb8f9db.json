@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE SCHEMASTORE VIEW customers WITH CONTAINER terms AS SELECT r.as_of AS as_of, r.ticker AS ticker, r.customer_name AS customer_name, CAST(r.payment_terms_days AS BIGINT) AS payment_terms_days, CAST(r.credit_limit_usd AS DOUBLE) AS credit_limit_usd, r.customer_since AS customer_since, r.account_manager AS account_manager FROM halden_systems.customers_src LATERAL VIEW explode(records) AS r",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:30:18.561Z"
+}

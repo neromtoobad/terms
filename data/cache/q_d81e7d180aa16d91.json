@@ -1,0 +1,8 @@
+{
+ "sql": "CACHE TABLE terms_sec.w_revenuefromcontractwithcustomerexcludingassessedtax_raw",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:29:16.314Z"
+}

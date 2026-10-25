@@ -1,0 +1,36 @@
+{
+ "sql": "SELECT note_date, ticker, category, note FROM terms.collections_notes WHERE as_of = '2026-10-26' AND ticker IN ('KSS', 'AAP') ORDER BY ticker, note_date",
+ "columns": [
+  "note_date",
+  "ticker",
+  "category",
+  "note"
+ ],
+ "rows": [
+  [
+   "2026-10-16",
+   "AAP",
+   "contact",
+   "AAP buyer asks for more headroom for Q4 store resets; order SO-4488 pending."
+  ],
+  [
+   "2026-10-24",
+   "AAP",
+   "promise_to_pay",
+   "AAP AP team: payment run delayed by their ERP migration; expects to pay the Sept 25 invoice by Oct 31. Buyer placed SO-4530 meanwhile."
+  ],
+  [
+   "2026-10-10",
+   "KSS",
+   "dispute",
+   "Kohl's disputes $18,400 of the September 7 invoice: damaged pallets at the Ohio DC. Photos requested."
+  ],
+  [
+   "2026-10-24",
+   "KSS",
+   "dispute",
+   "Kohl's paid the September 7 invoice short by the disputed $18,400; dispute still open."
+  ]
+ ],
+ "recordedAt": "2026-10-25T13:07:59.727Z"
+}

@@ -1,0 +1,8 @@
+{
+ "sql": "CACHE TABLE halden_systems.invoices_src",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:31:47.388Z"
+}

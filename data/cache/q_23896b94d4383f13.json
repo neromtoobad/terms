@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE SCHEMASTORE VIEW probe_union2 WITH CONTAINER terms AS SELECT 'WMT' AS ticker, CAST(cik AS STRING) AS cik, `entityName` AS entity_name, tag AS concept, fact.frame AS frame, fact.`start` AS period_start, fact.`end` AS period_end, CAST(fact.val AS DOUBLE) AS value_usd, CAST(fact.fy AS BIGINT) AS fiscal_year, fact.fp AS fiscal_period, fact.form AS form, fact.filed AS filed FROM terms_sec.wmt_netincomeloss_raw LATERAL VIEW explode(units.USD) AS fact WHERE fact.frame IS NOT NULL UNION ALL SELECT 'TGT' AS ticker, CAST(cik AS STRING) AS cik, `entityName` AS entity_name, tag AS concept, fact.frame AS frame, fact.`start` AS period_start, fact.`end` AS period_end, CAST(fact.val AS DOUBLE) AS value_usd, CAST(fact.fy AS BIGINT) AS fiscal_year, fact.fp AS fiscal_period, fact.form AS form, fact.filed AS filed FROM terms_sec.tgt_netincomeloss_raw LATERAL VIEW explode(units.USD) AS fact WHERE fact.frame IS NOT NULL",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:25:20.632Z"
+}

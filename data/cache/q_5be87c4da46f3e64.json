@@ -1,0 +1,16 @@
+{
+ "sql": "SELECT ticker, disputed, COUNT(*) AS n FROM terms.invoices WHERE disputed = 1 GROUP BY ticker, disputed",
+ "columns": [
+  "ticker",
+  "disputed",
+  "n"
+ ],
+ "rows": [
+  [
+   "KSS",
+   "1",
+   "1"
+  ]
+ ],
+ "recordedAt": "2026-10-25T12:31:56.472Z"
+}

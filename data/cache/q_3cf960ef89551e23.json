@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE SCHEMASTORE VIEW orders WITH CONTAINER terms AS SELECT r.as_of AS as_of, r.order_id AS order_id, r.ticker AS ticker, r.order_date AS order_date, r.ship_by AS ship_by, CAST(r.amount_usd AS DOUBLE) AS amount_usd, r.status AS status FROM halden_systems.orders_src LATERAL VIEW explode(records) AS r",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:30:20.504Z"
+}

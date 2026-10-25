@@ -1,0 +1,12 @@
+{
+ "sql": "SELECT 1 AS one",
+ "columns": [
+  "one"
+ ],
+ "rows": [
+  [
+   "1"
+  ]
+ ],
+ "recordedAt": "2026-10-25T13:28:22.794Z"
+}

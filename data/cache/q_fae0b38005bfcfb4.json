@@ -1,0 +1,12 @@
+{
+ "sql": "SELECT COUNT(*) AS n FROM terms.sec_revenue",
+ "columns": [
+  "n"
+ ],
+ "rows": [
+  [
+   "327"
+  ]
+ ],
+ "recordedAt": "2026-10-25T12:30:24.887Z"
+}

@@ -1,0 +1,8 @@
+{
+ "sql": "DROP VIEW terms.probe_union2",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:25:25.948Z"
+}

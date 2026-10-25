@@ -1,0 +1,18 @@
+{
+ "sql": "SELECT note_date, ticker, category, note FROM terms.collections_notes WHERE as_of = '2026-10-19' AND ticker IN ('BBWI', 'DKS') ORDER BY ticker, note_date",
+ "columns": [
+  "note_date",
+  "ticker",
+  "category",
+  "note"
+ ],
+ "rows": [
+  [
+   "2026-10-15",
+   "DKS",
+   "contact",
+   "DKS is integrating the Foot Locker banners and asks for an $800,000 limit for Q4 fixtures."
+  ]
+ ],
+ "recordedAt": "2026-10-25T13:06:42.188Z"
+}

@@ -1,0 +1,9 @@
+node_modules
+web/dist
+logs/*
+data/runtime*
+.env
+.env.*
+!.env.example
+.git
+.DS_Store

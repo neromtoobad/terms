@@ -1,0 +1,8 @@
+{
+ "sql": "CACHE TABLE terms_sec.pton_liabilitiescurrent_raw",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:30:08.726Z"
+}

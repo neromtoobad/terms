@@ -1,0 +1,151 @@
+{
+ "system": "customers",
+ "generated": "scripts/gen-ledger.ts",
+ "simulated": true,
+ "records": [
+  {
+   "as_of": "2026-10-19",
+   "ticker": "WMT",
+   "customer_name": "Walmart Inc.",
+   "payment_terms_days": 60,
+   "credit_limit_usd": 1500000,
+   "customer_since": "2014",
+   "account_manager": "Dana Price"
+  },
+  {
+   "as_of": "2026-10-19",
+   "ticker": "TGT",
+   "customer_name": "Target Corporation",
+   "payment_terms_days": 45,
+   "credit_limit_usd": 900000,
+   "customer_since": "2016",
+   "account_manager": "Dana Price"
+  },
+  {
+   "as_of": "2026-10-19",
+   "ticker": "KSS",
+   "customer_name": "Kohl's Corporation",
+   "payment_terms_days": 45,
+   "credit_limit_usd": 400000,
+   "customer_since": "2018",
+   "account_manager": "Luis Ortega"
+  },
+  {
+   "as_of": "2026-10-19",
+   "ticker": "AAP",
+   "customer_name": "Advance Auto Parts, Inc.",
+   "payment_terms_days": 30,
+   "credit_limit_usd": 250000,
+   "customer_since": "2021",
+   "account_manager": "Mei Chen"
+  },
+  {
+   "as_of": "2026-10-19",
+   "ticker": "PTON",
+   "customer_name": "Peloton Interactive, Inc.",
+   "payment_terms_days": 30,
+   "credit_limit_usd": 150000,
+   "customer_since": "2022",
+   "account_manager": "Mei Chen"
+  },
+  {
+   "as_of": "2026-10-19",
+   "ticker": "W",
+   "customer_name": "Wayfair Inc.",
+   "payment_terms_days": 30,
+   "credit_limit_usd": 600000,
+   "customer_since": "2019",
+   "account_manager": "Luis Ortega"
+  },
+  {
+   "as_of": "2026-10-19",
+   "ticker": "BBWI",
+   "customer_name": "Bath & Body Works, Inc.",
+   "payment_terms_days": 45,
+   "credit_limit_usd": 350000,
+   "customer_since": "2020",
+   "account_manager": "Sam Patel"
+  },
+  {
+   "as_of": "2026-10-19",
+   "ticker": "DKS",
+   "customer_name": "Dick's Sporting Goods, Inc.",
+   "payment_terms_days": 45,
+   "credit_limit_usd": 500000,
+   "customer_since": "2017",
+   "account_manager": "Sam Patel"
+  },
+  {
+   "as_of": "2026-10-26",
+   "ticker": "WMT",
+   "customer_name": "Walmart Inc.",
+   "payment_terms_days": 60,
+   "credit_limit_usd": 1500000,
+   "customer_since": "2014",
+   "account_manager": "Dana Price"
+  },
+  {
+   "as_of": "2026-10-26",
+   "ticker": "TGT",
+   "customer_name": "Target Corporation",
+   "payment_terms_days": 45,
+   "credit_limit_usd": 900000,
+   "customer_since": "2016",
+   "account_manager": "Dana Price"
+  },
+  {
+   "as_of": "2026-10-26",
+   "ticker": "KSS",
+   "customer_name": "Kohl's Corporation",
+   "payment_terms_days": 45,
+   "credit_limit_usd": 400000,
+   "customer_since": "2018",
+   "account_manager": "Luis Ortega"
+  },
+  {
+   "as_of": "2026-10-26",
+   "ticker": "AAP",
+   "customer_name": "Advance Auto Parts, Inc.",
+   "payment_terms_days": 30,
+   "credit_limit_usd": 250000,
+   "customer_since": "2021",
+   "account_manager": "Mei Chen"
+  },
+  {
+   "as_of": "2026-10-26",
+   "ticker": "PTON",
+   "customer_name": "Peloton Interactive, Inc.",
+   "payment_terms_days": 30,
+   "credit_limit_usd": 150000,
+   "customer_since": "2022",
+   "account_manager": "Mei Chen"
+  },
+  {
+   "as_of": "2026-10-26",
+   "ticker": "W",
+   "customer_name": "Wayfair Inc.",
+   "payment_terms_days": 30,
+   "credit_limit_usd": 600000,
+   "customer_since": "2019",
+   "account_manager": "Luis Ortega"
+  },
+  {
+   "as_of": "2026-10-26",
+   "ticker": "BBWI",
+   "customer_name": "Bath & Body Works, Inc.",
+   "payment_terms_days": 45,
+   "credit_limit_usd": 350000,
+   "customer_since": "2020",
+   "account_manager": "Sam Patel"
+  },
+  {
+   "as_of": "2026-10-26",
+   "ticker": "DKS",
+   "customer_name": "Dick's Sporting Goods, Inc.",
+   "payment_terms_days": 45,
+   "credit_limit_usd": 500000,
+   "customer_since": "2017",
+   "account_manager": "Sam Patel"
+  }
+ ]
+}

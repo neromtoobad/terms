@@ -1,0 +1,8 @@
+{
+ "sql": "DROP VIEW terms.wmt_sec_net_income",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:25:26.369Z"
+}

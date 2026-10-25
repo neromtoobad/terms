@@ -1,0 +1,1658 @@
+{
+ "run_id": "example_4-mvnueojf",
+ "status": "success",
+ "agents": [
+  {
+   "name": "Intake",
+   "role": "Scout Intent: classifies and guards the request, and signs the contract that fixes the desk's authority"
+  },
+  {
+   "name": "Analyst",
+   "role": "Reads each customer's real SEC filings through Zetaris: revenue trend, profit, liquidity"
+  },
+  {
+   "name": "Collections",
+   "role": "Reads Halden's ledger through Zetaris: utilisation, lateness, past due, disputes, orders waiting"
+  },
+  {
+   "name": "Archivist",
+   "role": "H-MEM memory of past decisions and how they turned out; World Model case file"
+  },
+  {
+   "name": "Underwriter",
+   "role": "Proposes each decision on Nemotron Ultra, citing clauses and evidence"
+  },
+  {
+   "name": "Risk Officer",
+   "role": "Applies the policy and sector notes, disputes the model, overrules it if needed, flags approvals"
+  },
+  {
+   "name": "Executor",
+   "role": "Changes limits and orders within authority; raises approvals and drafts notices for the rest"
+  }
+ ],
+ "memory": {
+  "recalled": 18,
+  "stored": 8
+ },
+ "engines": {
+  "scout_intent": "contract 6d7f22ae refreshed 4x",
+  "hmem": "18 recalled, 8 stored",
+  "world_model": "295 case-file events",
+  "markovian": "4 bounded steps (completed), ~0 tokens saved (estimated)"
+ },
+ "cost": {
+  "quote": {
+   "maxRounds": 5,
+   "maxQueries": 28,
+   "maxModelCalls": 28,
+   "maxSeconds": 600,
+   "rationale": "portfolio review: 8 accounts in 4 bounded steps"
+  },
+  "spent": {
+   "modelCalls": 8,
+   "queries": 24,
+   "rounds": 4,
+   "estTokens": 21261,
+   "seconds": 120
+  },
+  "escalations": []
+ },
+ "data_sources": {
+  "live": 24
+ },
+ "trace_id": "example_4-mvnueojf",
+ "log_file": "logs/trace-example_4-mvnueojf.jsonl",
+ "execution_time_seconds": 120.4,
+ "output": {
+  "summary": "Week 2 review (2026-10-26): 8 accounts. AAP decrease $312,500 → $250,000. 7 kept.",
+  "as_of": "2026-10-26",
+  "week": 2,
+  "decisions": [
+   {
+    "action": "KEEP",
+    "newLimit": 1500000,
+    "orders": [],
+    "rationale": "Limit stays at $1,500,000 because utilisation is only 63% (POL-6 requires ≥80% for an increase) and no other policy trigger forces a change. The current ratio of 0.77 is normal for big-box retail and not a distress signal (SN-1), so POL-5 does not apply. Open receivables of $940,000 fit within the $1,500,000 limit with no past-due invoices (POL-3, POL-10).",
+    "clauses": [
+     "POL-10",
+     "SN-1",
+     "POL-9"
+    ],
+    "confidence": 0.95,
+    "by": "model",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "id": "dec-a22a94b3",
+    "ticker": "WMT",
+    "fromLimit": 1500000,
+    "needsApproval": false,
+    "riskNotes": [
+     "Analyst flag \"current ratio 0.77 is below 1.0\" dismissed by SN-1",
+     "Dropped citations that do not apply here: POL-1, POL-3, POL-4, POL-5, POL-6, POL-7, POL-8"
+    ],
+    "disputes": 0,
+    "dismissedFlags": [
+     {
+      "flag": "current ratio 0.77 is below 1.0",
+      "by": "SN-1"
+     }
+    ],
+    "evidence": [
+     "q_e6c23dd1dcd5008f",
+     "q_b0df06758bcede0b",
+     "q_35a22df671acb6b3",
+     "q_f58fb234e870d0ce",
+     "q_2ad695d996366c23",
+     "q_4b7932b3f6eec408"
+    ],
+    "execution": {
+     "status": "no_change",
+     "actions": []
+    }
+   },
+   {
+    "action": "KEEP",
+    "newLimit": 900000,
+    "orders": [
+     {
+      "order_id": "SO-4533",
+      "action": "release"
+     }
+    ],
+    "rationale": "Limit remains $900,000 because utilisation is only 40% (POL-6 requires ≥80% for an increase) and no other policy trigger forces a change. The current ratio of 0.99 is normal for big-box retail and not a distress signal (SN-1), so POL-5 does not apply. Open receivables of $360,000 plus the $120,000 order fit within the $900,000 limit with no past-due invoices (POL-3, POL-10).",
+    "clauses": [
+     "POL-10",
+     "SN-1",
+     "POL-9"
+    ],
+    "confidence": 0.95,
+    "by": "model",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "id": "dec-4974fc3f",
+    "ticker": "TGT",
+    "fromLimit": 900000,
+    "needsApproval": false,
+    "riskNotes": [
+     "Analyst flag \"current ratio 0.99 is below 1.0\" dismissed by SN-1",
+     "Dropped citations that do not apply here: POL-1, POL-3, POL-4, POL-5, POL-6, POL-7, POL-8"
+    ],
+    "disputes": 0,
+    "dismissedFlags": [
+     {
+      "flag": "current ratio 0.99 is below 1.0",
+      "by": "SN-1"
+     }
+    ],
+    "evidence": [
+     "q_e6c23dd1dcd5008f",
+     "q_b0df06758bcede0b",
+     "q_35a22df671acb6b3",
+     "q_f58fb234e870d0ce",
+     "q_2ad695d996366c23",
+     "q_4b7932b3f6eec408"
+    ],
+    "execution": {
+     "status": "applied",
+     "actions": [
+      "SO-4533 released"
+     ]
+    }
+   },
+   {
+    "action": "KEEP",
+    "newLimit": 400000,
+    "orders": [],
+    "rationale": "Limit stays at $400,000 because average payment is 9.5 days late (POL-6 requires ≤5 days for an increase) and utilisation is 69% (POL-6 requires ≥80%). The current ratio of 1.49 and a profitable latest quarter mean POL-5 does not apply, and the $18,400 dispute blocks any increase under POL-7. No orders are pending.",
+    "clauses": [
+     "POL-7",
+     "POL-10",
+     "POL-9"
+    ],
+    "confidence": 0.95,
+    "by": "model",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "id": "dec-7f3661f8",
+    "ticker": "KSS",
+    "fromLimit": 400000,
+    "needsApproval": false,
+    "riskNotes": [
+     "Dropped citations that do not apply here: POL-1, POL-3, POL-4, POL-5, POL-6, POL-8, SN-1"
+    ],
+    "disputes": 0,
+    "dismissedFlags": [],
+    "evidence": [
+     "q_4055957e42794571",
+     "q_fe63f6a782a7ab1e",
+     "q_2c96ba9682e3f5ec",
+     "q_b18c37911c3b7cdf",
+     "q_ab5ec4f5a7212d7f",
+     "q_9e624955f81438cf"
+    ],
+    "execution": {
+     "status": "no_change",
+     "actions": []
+    }
+   },
+   {
+    "action": "DECREASE",
+    "newLimit": 250000,
+    "orders": [
+     {
+      "order_id": "SO-4530",
+      "action": "hold"
+     }
+    ],
+    "rationale": "POL-8 early-warning condition is triggered: the limit was increased from $250,000 to $312,500 on 2026-10-19, and within 30 days the customer is 5 days past due on INV-10492 while using 95% of the new limit. The policy requires reverting the increase to $250,000 and holding new orders until the account is current. Open receivables of $296,000 already exceed the reverted limit, so SO-4530 must be held (POL-10).",
+    "clauses": [
+     "POL-2",
+     "POL-8",
+     "POL-10",
+     "POL-9"
+    ],
+    "confidence": 0.99,
+    "by": "model",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "id": "dec-8303218a",
+    "ticker": "AAP",
+    "fromLimit": 312500,
+    "needsApproval": false,
+    "riskNotes": [
+     "Dropped citations that do not apply here: POL-1, POL-3, POL-4, POL-5, POL-6, POL-7"
+    ],
+    "disputes": 0,
+    "dismissedFlags": [],
+    "evidence": [
+     "q_4055957e42794571",
+     "q_fe63f6a782a7ab1e",
+     "q_2c96ba9682e3f5ec",
+     "q_b18c37911c3b7cdf",
+     "q_ab5ec4f5a7212d7f",
+     "q_9e624955f81438cf"
+    ],
+    "execution": {
+     "status": "applied",
+     "actions": [
+      "limit $312,500 → $250,000",
+      "SO-4530 held",
+      "notice ntc-271eec drafted"
+     ],
+     "noticeId": "ntc-271eec"
+    }
+   },
+   {
+    "action": "KEEP",
+    "newLimit": 150000,
+    "orders": [],
+    "rationale": "Limit remains $150,000 because utilisation is only 40% (POL-6 requires ≥80% for an increase) and no other policy trigger forces a change. The customer paid on average 1.8 days late over six months, has no past-due invoices (POL-3), no disputes (POL-7), and the latest quarter was profitable with a current ratio of 2.84 (POL-5). Open receivables of $60,000 fit well within the existing limit (POL-10).",
+    "clauses": [
+     "POL-10",
+     "POL-9"
+    ],
+    "confidence": 0.98,
+    "by": "model",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "id": "dec-c9a76ca9",
+    "ticker": "PTON",
+    "fromLimit": 150000,
+    "needsApproval": false,
+    "riskNotes": [
+     "Dropped citations that do not apply here: POL-1, POL-3, POL-4, POL-5, POL-6, POL-7, POL-8"
+    ],
+    "disputes": 0,
+    "dismissedFlags": [],
+    "evidence": [
+     "q_37134f0ffe094a78",
+     "q_ddc165f450a33d84",
+     "q_14e1b0a4306bb843",
+     "q_462164cfb77bd4b3",
+     "q_14f18f4df29b82c4",
+     "q_2bcaa216d52f7bd1"
+    ],
+    "execution": {
+     "status": "no_change",
+     "actions": []
+    }
+   },
+   {
+    "action": "KEEP",
+    "newLimit": 450000,
+    "orders": [
+     {
+      "order_id": "SO-4471",
+      "action": "hold"
+     }
+    ],
+    "rationale": "POL-4 and POL-5 are both triggered (net loss in 3 of the last 3 quarters; current ratio 0.74 with a loss in CY2026Q2), so the limit cannot be increased and the 25% cut to $450,000 already applied on 2026-10-19 stands. The oldest undisputed past-due invoice (INV-10504) is 36 days overdue, which is under the 60-day threshold of POL-3, but the order exceeds the available headroom ($450,000 limit − $402,000 open = $48,000) and POL-10 therefore requires it to be held.",
+    "clauses": [
+     "POL-4",
+     "POL-5",
+     "POL-10",
+     "POL-9"
+    ],
+    "confidence": 0.98,
+    "by": "model",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "id": "dec-bdf3d91e",
+    "ticker": "W",
+    "fromLimit": 450000,
+    "needsApproval": false,
+    "riskNotes": [
+     "Dropped citations that do not apply here: POL-1, POL-3, POL-6, POL-7, POL-8, SN-1"
+    ],
+    "disputes": 0,
+    "dismissedFlags": [],
+    "evidence": [
+     "q_37134f0ffe094a78",
+     "q_ddc165f450a33d84",
+     "q_14e1b0a4306bb843",
+     "q_462164cfb77bd4b3",
+     "q_14f18f4df29b82c4",
+     "q_2bcaa216d52f7bd1"
+    ],
+    "execution": {
+     "status": "applied",
+     "actions": [
+      "SO-4471 held"
+     ]
+    }
+   },
+   {
+    "action": "KEEP",
+    "newLimit": 350000,
+    "orders": [],
+    "rationale": "Limit stays at $350,000 because utilisation is 50%, below the 80% threshold required for an increase under POL-6. All other policy checks pass: no past-due invoices (POL-3), no losses in the last three quarters (POL-4), current ratio 1.20 with a profitable latest quarter (POL-5), and no disputes (POL-7).",
+    "clauses": [
+     "POL-10",
+     "POL-9"
+    ],
+    "confidence": 0.98,
+    "by": "model",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "id": "dec-f571c350",
+    "ticker": "BBWI",
+    "fromLimit": 350000,
+    "needsApproval": false,
+    "riskNotes": [
+     "Dropped citations that do not apply here: POL-1, POL-3, POL-4, POL-5, POL-6, POL-7, POL-8"
+    ],
+    "disputes": 0,
+    "dismissedFlags": [],
+    "evidence": [
+     "q_b3a3bc3920defa2a",
+     "q_31ef07c84083fff1",
+     "q_62104fda8fe59606",
+     "q_3069c780971637f5",
+     "q_2fcae193926d407b",
+     "q_ec3f5c14d51777e8"
+    ],
+    "execution": {
+     "status": "no_change",
+     "actions": []
+    }
+   },
+   {
+    "action": "KEEP",
+    "newLimit": 625000,
+    "orders": [],
+    "rationale": "POL-6 increase criteria are not met because utilisation is 76% (below the 80% threshold) even though average payment is 1.7 days late (≤5), the latest quarter is profitable ($315.5M), no invoice is past due, and revenue grew 53% YoY. SN-2 applies because the 53% revenue jump follows the Foot Locker acquisition, so any future increase must be staged with credit-manager approval. All other policy checks pass: POL-1 ceiling is $2,000,000 (1% of $5.59B revenue), POL-3 no invoice >60 days past due, POL-4 zero loss-making quarters in the last three, POL-5 current ratio 1.48 with a profitable latest quarter, POL-7 no disputes, and POL-8 early-warning condition is not triggered (76% used, nothing pa",
+    "clauses": [
+     "POL-2",
+     "SN-2",
+     "POL-9"
+    ],
+    "confidence": 0.98,
+    "by": "model",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "id": "dec-ee1be358",
+    "ticker": "DKS",
+    "fromLimit": 625000,
+    "needsApproval": false,
+    "riskNotes": [
+     "Dropped citations that do not apply here: POL-1, POL-3, POL-4, POL-5, POL-6, POL-7, POL-8"
+    ],
+    "disputes": 0,
+    "dismissedFlags": [],
+    "evidence": [
+     "q_b3a3bc3920defa2a",
+     "q_31ef07c84083fff1",
+     "q_62104fda8fe59606",
+     "q_3069c780971637f5",
+     "q_2fcae193926d407b",
+     "q_ec3f5c14d51777e8"
+    ],
+    "execution": {
+     "status": "no_change",
+     "actions": []
+    }
+   }
+  ],
+  "outcomes": [],
+  "approvals_requested": [],
+  "notices_drafted": [
+   "ntc-271eec"
+  ],
+  "accounts": {
+   "WMT": {
+    "fundamentals": {
+     "ticker": "WMT",
+     "entity": "Walmart Inc.",
+     "revenue": {
+      "frame": "CY2026Q2",
+      "value": 186100000000,
+      "priorFrame": "CY2025Q2",
+      "prior": 175750000000,
+      "yoy": 0.05889046941678511
+     },
+     "netIncome": [
+      {
+       "frame": "CY2026Q2",
+       "value": 6366000000
+      },
+      {
+       "frame": "CY2026Q1",
+       "value": 5330000000
+      },
+      {
+       "frame": "CY2025Q3",
+       "value": 6143000000
+      }
+     ],
+     "lossesInLast3": 0,
+     "latestProfitable": true,
+     "currentRatio": {
+      "frame": "CY2026Q2I",
+      "assets": 88703000000,
+      "liabilities": 115630000000,
+      "value": 0.7671279079823575
+     },
+     "flags": [
+      "current ratio 0.77 is below 1.0"
+     ],
+     "evidence": [
+      "q_e6c23dd1dcd5008f",
+      "q_b0df06758bcede0b",
+      "q_35a22df671acb6b3"
+     ]
+    },
+    "ledger": {
+     "ticker": "WMT",
+     "asOf": "2026-10-26",
+     "name": "Walmart Inc.",
+     "termsDays": 60,
+     "erpLimit": 1500000,
+     "limit": 1500000,
+     "openAr": 940000,
+     "utilization": 0.6266666666666667,
+     "pastDue": [],
+     "maxDaysPastDue": 0,
+     "avgDaysLate6m": 2,
+     "disputes": [],
+     "disputedTotal": 0,
+     "pendingOrders": [],
+     "notes": [],
+     "evidence": [
+      "q_f58fb234e870d0ce",
+      "q_2ad695d996366c23",
+      "q_4b7932b3f6eec408"
+     ]
+    },
+    "memories": [
+     {
+      "id": "mem-11",
+      "content": "OUTCOME 2026-10-26 WMT: kept at $1,500,000 on 2026-10-19; paid as agreed.",
+      "relevance": 0.387,
+      "refs": [
+       "dec-ff60962c",
+       "q_ec5dd35c1a7fb1bc",
+       "q_edf68a58900b9f2f",
+       "q_d3628cdf7f01e8b7"
+      ]
+     },
+     {
+      "id": "mem-1",
+      "content": "DECISION 2026-10-19 WMT: KEEP, kept $1,500,000; orders SO-4490 release. Clauses POL-10, SN-1, POL-9. Limit stays at $1,500,000 because utilisation is only 70% (POL-6 requires ≥80% for an increase) and no other policy trigger forces a change. The current ratio of 0.77 is normal for big-box retail and not a distress signal (SN-1), so POL-5 does not apply. Open ",
+      "relevance": 0.319,
+      "refs": [
+       "dec-ff60962c",
+       "q_c08449836fa01d77",
+       "q_463e1ec7ee0bd5c6",
+       "q_234a113974220303",
+       "q_e62ea45f9cce62a8",
+       "q_b1a2aeb67829ae65",
+       "q_51e7cb56b0356586"
+      ]
+     }
+    ],
+    "conditions": [
+     {
+      "id": "POL-1",
+      "hit": false,
+      "detail": "ceiling $2,000,000 (the lower of $2,000,000 and 1% of CY2026Q2 revenue)"
+     },
+     {
+      "id": "POL-3",
+      "hit": false,
+      "detail": "oldest undisputed past due 0 days"
+     },
+     {
+      "id": "POL-4",
+      "hit": false,
+      "detail": "net loss in 0 of the last 3 quarters"
+     },
+     {
+      "id": "POL-5",
+      "hit": false,
+      "detail": "current ratio 0.77, latest quarter profitable"
+     },
+     {
+      "id": "POL-7",
+      "hit": false,
+      "detail": "no disputes in the ledger"
+     },
+     {
+      "id": "POL-8",
+      "hit": false,
+      "detail": "no increase in the last 30 days"
+     },
+     {
+      "id": "POL-6",
+      "hit": false,
+      "detail": "not eligible: utilisation 63% (needs 80%)"
+     },
+     {
+      "id": "SN-1",
+      "hit": true,
+      "detail": "current ratio 0.77 is normal for WMT's model; not a distress signal on its own"
+     }
+    ]
+   },
+   "TGT": {
+    "fundamentals": {
+     "ticker": "TGT",
+     "entity": "Target Corporation",
+     "revenue": {
+      "frame": "CY2026Q2",
+      "value": 26539000000,
+      "priorFrame": "CY2025Q2",
+      "prior": 25211000000,
+      "yoy": 0.05267541945975962
+     },
+     "netIncome": [
+      {
+       "frame": "CY2026Q2",
+       "value": 1877000000
+      },
+      {
+       "frame": "CY2026Q1",
+       "value": 781000000
+      },
+      {
+       "frame": "CY2025Q4",
+       "value": 1046000000
+      }
+     ],
+     "lossesInLast3": 0,
+     "latestProfitable": true,
+     "currentRatio": {
+      "frame": "CY2026Q2I",
+      "assets": 20928000000,
+      "liabilities": 21180000000,
+      "value": 0.9881019830028328
+     },
+     "flags": [
+      "current ratio 0.99 is below 1.0"
+     ],
+     "evidence": [
+      "q_e6c23dd1dcd5008f",
+      "q_b0df06758bcede0b",
+      "q_35a22df671acb6b3"
+     ]
+    },
+    "ledger": {
+     "ticker": "TGT",
+     "asOf": "2026-10-26",
+     "name": "Target Corporation",
+     "termsDays": 45,
+     "erpLimit": 900000,
+     "limit": 900000,
+     "openAr": 360000,
+     "utilization": 0.4,
+     "pastDue": [],
+     "maxDaysPastDue": 0,
+     "avgDaysLate6m": 1.8333333333333333,
+     "disputes": [],
+     "disputedTotal": 0,
+     "pendingOrders": [
+      {
+       "order_id": "SO-4533",
+       "amount": 120000,
+       "ship_by": "2026-11-02"
+      }
+     ],
+     "notes": [
+      {
+       "date": "2026-10-12",
+       "category": "contact",
+       "note": "Target confirms Q4 display program volumes in line with last year."
+      }
+     ],
+     "evidence": [
+      "q_f58fb234e870d0ce",
+      "q_2ad695d996366c23",
+      "q_4b7932b3f6eec408"
+     ]
+    },
+    "memories": [
+     {
+      "id": "mem-12",
+      "content": "OUTCOME 2026-10-26 TGT: kept at $900,000 on 2026-10-19; paid as agreed.",
+      "relevance": 0.371,
+      "refs": [
+       "dec-f9ab24f8",
+       "q_ec5dd35c1a7fb1bc",
+       "q_edf68a58900b9f2f",
+       "q_d3628cdf7f01e8b7"
+      ]
+     },
+     {
+      "id": "mem-2",
+      "content": "DECISION 2026-10-19 TGT: KEEP, kept $900,000. Clauses POL-10, SN-1, POL-9. Limit remains $900,000 because utilisation is only 60% (POL-6 requires ≥80% for an increase) and no other policy trigger forces a change. The current ratio of 0.99 is normal for big-box retail and not a distress signal (SN-1), so POL-5 does not apply. Open rec",
+      "relevance": 0.275,
+      "refs": [
+       "dec-f9ab24f8",
+       "q_c08449836fa01d77",
+       "q_463e1ec7ee0bd5c6",
+       "q_234a113974220303",
+       "q_e62ea45f9cce62a8",
+       "q_b1a2aeb67829ae65",
+       "q_51e7cb56b0356586"
+      ]
+     }
+    ],
+    "conditions": [
+     {
+      "id": "POL-1",
+      "hit": false,
+      "detail": "ceiling $2,000,000 (the lower of $2,000,000 and 1% of CY2026Q2 revenue)"
+     },
+     {
+      "id": "POL-3",
+      "hit": false,
+      "detail": "oldest undisputed past due 0 days"
+     },
+     {
+      "id": "POL-4",
+      "hit": false,
+      "detail": "net loss in 0 of the last 3 quarters"
+     },
+     {
+      "id": "POL-5",
+      "hit": false,
+      "detail": "current ratio 0.99, latest quarter profitable"
+     },
+     {
+      "id": "POL-7",
+      "hit": false,
+      "detail": "no disputes in the ledger"
+     },
+     {
+      "id": "POL-8",
+      "hit": false,
+      "detail": "no increase in the last 30 days"
+     },
+     {
+      "id": "POL-6",
+      "hit": false,
+      "detail": "not eligible: utilisation 40% (needs 80%)"
+     },
+     {
+      "id": "SN-1",
+      "hit": true,
+      "detail": "current ratio 0.99 is normal for TGT's model; not a distress signal on its own"
+     }
+    ]
+   },
+   "KSS": {
+    "fundamentals": {
+     "ticker": "KSS",
+     "entity": "Kohl's Corporation",
+     "revenue": {
+      "frame": "CY2026Q2",
+      "value": 3515000000,
+      "priorFrame": "CY2025Q2",
+      "prior": 3546000000,
+      "yoy": -0.008742244782853903
+     },
+     "netIncome": [
+      {
+       "frame": "CY2026Q2",
+       "value": 151000000
+      },
+      {
+       "frame": "CY2026Q1",
+       "value": -14000000
+      },
+      {
+       "frame": "CY2025Q3",
+       "value": 8000000
+      }
+     ],
+     "lossesInLast3": 1,
+     "latestProfitable": true,
+     "currentRatio": {
+      "frame": "CY2026Q2I",
+      "assets": 4019000000,
+      "liabilities": 2696000000,
+      "value": 1.4907270029673592
+     },
+     "flags": [],
+     "evidence": [
+      "q_4055957e42794571",
+      "q_fe63f6a782a7ab1e",
+      "q_2c96ba9682e3f5ec"
+     ]
+    },
+    "ledger": {
+     "ticker": "KSS",
+     "asOf": "2026-10-26",
+     "name": "Kohl's Corporation",
+     "termsDays": 45,
+     "erpLimit": 400000,
+     "limit": 400000,
+     "openAr": 276400,
+     "utilization": 0.691,
+     "pastDue": [],
+     "maxDaysPastDue": 0,
+     "avgDaysLate6m": 9.454545454545455,
+     "disputes": [
+      {
+       "invoice": "INV-10489",
+       "amount": 18400
+      }
+     ],
+     "disputedTotal": 18400,
+     "pendingOrders": [],
+     "notes": [
+      {
+       "date": "2026-10-10",
+       "category": "dispute",
+       "note": "Kohl's disputes $18,400 of the September 7 invoice: damaged pallets at the Ohio DC. Photos requested."
+      },
+      {
+       "date": "2026-10-24",
+       "category": "dispute",
+       "note": "Kohl's paid the September 7 invoice short by the disputed $18,400; dispute still open."
+      }
+     ],
+     "evidence": [
+      "q_b18c37911c3b7cdf",
+      "q_ab5ec4f5a7212d7f",
+      "q_9e624955f81438cf"
+     ]
+    },
+    "memories": [
+     {
+      "id": "mem-13",
+      "content": "OUTCOME 2026-10-26 KSS: kept at $400,000 on 2026-10-19; paid as agreed; $18,400 disputed.",
+      "relevance": 0.369,
+      "refs": [
+       "dec-d332549f",
+       "q_ec5dd35c1a7fb1bc",
+       "q_edf68a58900b9f2f",
+       "q_d3628cdf7f01e8b7"
+      ]
+     },
+     {
+      "id": "mem-3",
+      "content": "DECISION 2026-10-19 KSS: KEEP, kept $400,000; orders SO-4495 release. Clauses POL-10, POL-9. Limit stays at $400,000 because average payment is 10.2 days late (POL-6 requires ≤5 days for an increase) and no other policy trigger forces a change. The current ratio of 1.49 and a profitable latest quarter mean POL-5 does not apply, and the $18,400 dispute",
+      "relevance": 0.32,
+      "refs": [
+       "dec-d332549f",
+       "q_4d152c4e36aae081",
+       "q_5d330832efbe0094",
+       "q_3e7bdaaa1d54c53e",
+       "q_b0148a51790dca76",
+       "q_2a4d031095bc9756",
+       "q_572639674d79c05a"
+      ]
+     }
+    ],
+    "conditions": [
+     {
+      "id": "POL-1",
+      "hit": false,
+      "detail": "ceiling $2,000,000 (the lower of $2,000,000 and 1% of CY2026Q2 revenue)"
+     },
+     {
+      "id": "POL-3",
+      "hit": false,
+      "detail": "oldest undisputed past due 0 days"
+     },
+     {
+      "id": "POL-4",
+      "hit": false,
+      "detail": "net loss in 1 of the last 3 quarters"
+     },
+     {
+      "id": "POL-5",
+      "hit": false,
+      "detail": "current ratio 1.49, latest quarter profitable"
+     },
+     {
+      "id": "POL-7",
+      "hit": true,
+      "detail": "$18,400 disputed (INV-10489)"
+     },
+     {
+      "id": "POL-8",
+      "hit": false,
+      "detail": "no increase in the last 30 days"
+     },
+     {
+      "id": "POL-6",
+      "hit": false,
+      "detail": "not eligible: pays 9.5 days late on average (max 5); utilisation 69% (needs 80%)"
+     }
+    ]
+   },
+   "AAP": {
+    "fundamentals": {
+     "ticker": "AAP",
+     "entity": "Advance Auto Parts, Inc.",
+     "revenue": {
+      "frame": "CY2026Q2",
+      "value": 2000000000,
+      "priorFrame": "CY2025Q2",
+      "prior": 2010000000,
+      "yoy": -0.00497512437810943
+     },
+     "netIncome": [
+      {
+       "frame": "CY2026Q2",
+       "value": 55000000
+      },
+      {
+       "frame": "CY2026Q1",
+       "value": 24000000
+      },
+      {
+       "frame": "CY2025Q3",
+       "value": -1000000
+      }
+     ],
+     "lossesInLast3": 1,
+     "latestProfitable": true,
+     "currentRatio": {
+      "frame": "CY2026Q2I",
+      "assets": 7473000000,
+      "liabilities": 4276000000,
+      "value": 1.7476613657623947
+     },
+     "flags": [],
+     "evidence": [
+      "q_4055957e42794571",
+      "q_fe63f6a782a7ab1e",
+      "q_2c96ba9682e3f5ec"
+     ]
+    },
+    "ledger": {
+     "ticker": "AAP",
+     "asOf": "2026-10-26",
+     "name": "Advance Auto Parts, Inc.",
+     "termsDays": 30,
+     "erpLimit": 250000,
+     "limit": 312500,
+     "openAr": 296000,
+     "utilization": 0.9472,
+     "pastDue": [
+      {
+       "invoice": "INV-10492",
+       "days": 5,
+       "amount": 112000
+      }
+     ],
+     "maxDaysPastDue": 5,
+     "avgDaysLate6m": 0.8333333333333334,
+     "disputes": [],
+     "disputedTotal": 0,
+     "pendingOrders": [
+      {
+       "order_id": "SO-4530",
+       "amount": 25000,
+       "ship_by": "2026-10-30"
+      }
+     ],
+     "notes": [
+      {
+       "date": "2026-10-16",
+       "category": "contact",
+       "note": "AAP buyer asks for more headroom for Q4 store resets; order SO-4488 pending."
+      },
+      {
+       "date": "2026-10-24",
+       "category": "promise_to_pay",
+       "note": "AAP AP team: payment run delayed by their ERP migration; expects to pay the Sept 25 invoice by Oct 31. Buyer placed SO-4530 meanwhile."
+      }
+     ],
+     "evidence": [
+      "q_b18c37911c3b7cdf",
+      "q_ab5ec4f5a7212d7f",
+      "q_9e624955f81438cf"
+     ]
+    },
+    "memories": [
+     {
+      "id": "mem-14",
+      "content": "OUTCOME 2026-10-26 AAP: after the increase to $312,500 on 2026-10-19, 95% of the limit is in use and INV-10492 is 5 days past due. The customer stretched the new headroom while falling behind: an early-warning sign (POL-8).",
+      "relevance": 0.266,
+      "refs": [
+       "dec-22d75a53",
+       "q_ec5dd35c1a7fb1bc",
+       "q_edf68a58900b9f2f",
+       "q_d3628cdf7f01e8b7"
+      ]
+     },
+     {
+      "id": "mem-4",
+      "content": "DECISION 2026-10-19 AAP: INCREASE, raised the limit $250,000 → $312,500; orders SO-4488 release. Clauses POL-1, POL-2, POL-6, POL-10, POL-9. All POL-6 increase criteria are met: average payment 0.8 days late (≤5), utilisation 92% (≥80%), revenue down only 0.5% YoY (≤3%), latest quarter profitable ($55M), and no invoice >30 days past due. The desk may raise the limit by up to 25% to $312,500 under P",
+      "relevance": 0.236,
+      "refs": [
+       "dec-22d75a53",
+       "q_4d152c4e36aae081",
+       "q_5d330832efbe0094",
+       "q_3e7bdaaa1d54c53e",
+       "q_b0148a51790dca76",
+       "q_2a4d031095bc9756",
+       "q_572639674d79c05a"
+      ]
+     }
+    ],
+    "conditions": [
+     {
+      "id": "POL-1",
+      "hit": false,
+      "detail": "ceiling $2,000,000 (the lower of $2,000,000 and 1% of CY2026Q2 revenue)"
+     },
+     {
+      "id": "POL-3",
+      "hit": false,
+      "detail": "oldest undisputed past due 5 days"
+     },
+     {
+      "id": "POL-4",
+      "hit": false,
+      "detail": "net loss in 1 of the last 3 quarters"
+     },
+     {
+      "id": "POL-5",
+      "hit": false,
+      "detail": "current ratio 1.75, latest quarter profitable"
+     },
+     {
+      "id": "POL-7",
+      "hit": false,
+      "detail": "no disputes in the ledger"
+     },
+     {
+      "id": "POL-8",
+      "hit": true,
+      "detail": "raised $250,000 → $312,500 on 2026-10-19; now 95% used, INV-10492 5 days past due"
+     },
+     {
+      "id": "POL-6",
+      "hit": true,
+      "detail": "eligible: up to +25% ($387,500)"
+     }
+    ]
+   },
+   "PTON": {
+    "fundamentals": {
+     "ticker": "PTON",
+     "entity": "Peloton Interactive, Inc.",
+     "revenue": {
+      "frame": "CY2026Q1",
+      "value": 630900000,
+      "priorFrame": "CY2025Q1",
+      "prior": 624000000,
+      "yoy": 0.01105769230769238
+     },
+     "netIncome": [
+      {
+       "frame": "CY2026Q1",
+       "value": 26400000
+      },
+      {
+       "frame": "CY2025Q4",
+       "value": -38800000
+      },
+      {
+       "frame": "CY2025Q3",
+       "value": 13900000
+      }
+     ],
+     "lossesInLast3": 1,
+     "latestProfitable": true,
+     "currentRatio": {
+      "frame": "CY2026Q2I",
+      "assets": 1489400000,
+      "liabilities": 525000000,
+      "value": 2.836952380952381
+     },
+     "flags": [],
+     "evidence": [
+      "q_37134f0ffe094a78",
+      "q_ddc165f450a33d84",
+      "q_14e1b0a4306bb843"
+     ]
+    },
+    "ledger": {
+     "ticker": "PTON",
+     "asOf": "2026-10-26",
+     "name": "Peloton Interactive, Inc.",
+     "termsDays": 30,
+     "erpLimit": 150000,
+     "limit": 150000,
+     "openAr": 60000,
+     "utilization": 0.4,
+     "pastDue": [],
+     "maxDaysPastDue": 0,
+     "avgDaysLate6m": 1.8333333333333333,
+     "disputes": [],
+     "disputedTotal": 0,
+     "pendingOrders": [],
+     "notes": [],
+     "evidence": [
+      "q_462164cfb77bd4b3",
+      "q_14f18f4df29b82c4",
+      "q_2bcaa216d52f7bd1"
+     ]
+    },
+    "memories": [
+     {
+      "id": "mem-15",
+      "content": "OUTCOME 2026-10-26 PTON: kept at $150,000 on 2026-10-19; paid as agreed.",
+      "relevance": 0.4,
+      "refs": [
+       "dec-5ef9e93c",
+       "q_ec5dd35c1a7fb1bc",
+       "q_edf68a58900b9f2f",
+       "q_d3628cdf7f01e8b7"
+      ]
+     },
+     {
+      "id": "mem-5",
+      "content": "DECISION 2026-10-19 PTON: KEEP, kept $150,000. Clauses POL-10, POL-9. Limit remains $150,000 because utilisation is only 40% (POL-6 requires ≥80% for an increase) and no other policy trigger forces a change. The customer paid on average 1.8 days late over six months, has no past-due invoices (POL-3), no disputes (POL-7), and the",
+      "relevance": 0.244,
+      "refs": [
+       "dec-5ef9e93c",
+       "q_1a2e381b8c8babd4",
+       "q_ba5a991540229c9f",
+       "q_22de56911acf3a2e",
+       "q_3a8d8092cec644e9",
+       "q_34b95782c9701271",
+       "q_929d94899051f9d5"
+      ]
+     }
+    ],
+    "conditions": [
+     {
+      "id": "POL-1",
+      "hit": false,
+      "detail": "ceiling $2,000,000 (the lower of $2,000,000 and 1% of CY2026Q1 revenue)"
+     },
+     {
+      "id": "POL-3",
+      "hit": false,
+      "detail": "oldest undisputed past due 0 days"
+     },
+     {
+      "id": "POL-4",
+      "hit": false,
+      "detail": "net loss in 1 of the last 3 quarters"
+     },
+     {
+      "id": "POL-5",
+      "hit": false,
+      "detail": "current ratio 2.84, latest quarter profitable"
+     },
+     {
+      "id": "POL-7",
+      "hit": false,
+      "detail": "no disputes in the ledger"
+     },
+     {
+      "id": "POL-8",
+      "hit": false,
+      "detail": "no increase in the last 30 days"
+     },
+     {
+      "id": "POL-6",
+      "hit": false,
+      "detail": "not eligible: utilisation 40% (needs 80%)"
+     }
+    ]
+   },
+   "W": {
+    "fundamentals": {
+     "ticker": "W",
+     "entity": "Wayfair Inc.",
+     "revenue": {
+      "frame": "CY2026Q2",
+      "value": 3519000000,
+      "priorFrame": "CY2025Q2",
+      "prior": 3273000000,
+      "yoy": 0.07516040329972506
+     },
+     "netIncome": [
+      {
+       "frame": "CY2026Q2",
+       "value": -1000000
+      },
+      {
+       "frame": "CY2026Q1",
+       "value": -105000000
+      },
+      {
+       "frame": "CY2025Q3",
+       "value": -99000000
+      }
+     ],
+     "lossesInLast3": 3,
+     "latestProfitable": false,
+     "currentRatio": {
+      "frame": "CY2026Q2I",
+      "assets": 1685000000,
+      "liabilities": 2268000000,
+      "value": 0.7429453262786596
+     },
+     "flags": [
+      "current ratio 0.74 is below 1.0",
+      "net loss in 3 of the last 3 quarters"
+     ],
+     "evidence": [
+      "q_37134f0ffe094a78",
+      "q_ddc165f450a33d84",
+      "q_14e1b0a4306bb843"
+     ]
+    },
+    "ledger": {
+     "ticker": "W",
+     "asOf": "2026-10-26",
+     "name": "Wayfair Inc.",
+     "termsDays": 30,
+     "erpLimit": 600000,
+     "limit": 450000,
+     "openAr": 402000,
+     "utilization": 0.8933333333333333,
+     "pastDue": [
+      {
+       "invoice": "INV-10504",
+       "days": 36,
+       "amount": 142000
+      }
+     ],
+     "maxDaysPastDue": 36,
+     "avgDaysLate6m": 14.777777777777779,
+     "disputes": [],
+     "disputedTotal": 0,
+     "pendingOrders": [
+      {
+       "order_id": "SO-4471",
+       "amount": 420000,
+       "ship_by": "2026-10-24"
+      }
+     ],
+     "notes": [
+      {
+       "date": "2026-09-08",
+       "category": "risk",
+       "note": "July invoice paid 24 days late. AP contact cited a cash management review."
+      },
+      {
+       "date": "2026-10-14",
+       "category": "contact",
+       "note": "Wayfair AP: August and September invoices on hold pending 'cash management review'; no payment date given."
+      },
+      {
+       "date": "2026-10-23",
+       "category": "contact",
+       "note": "Wayfair paid the August invoice (63 days late) after the order hold was escalated. September invoice still open."
+      }
+     ],
+     "evidence": [
+      "q_462164cfb77bd4b3",
+      "q_14f18f4df29b82c4",
+      "q_2bcaa216d52f7bd1"
+     ]
+    },
+    "memories": [
+     {
+      "id": "mem-16",
+      "content": "OUTCOME 2026-10-26 W: after the hold on 2026-10-19 with SO-4471 held, the oldest past-due invoice is 36 days. Latest note: Wayfair paid the August invoice (63 days late) after the order hold was escalated. September invoice still open. The hold got the overdue invoice paid.",
+      "relevance": 0.263,
+      "refs": [
+       "dec-6c654680",
+       "q_ec5dd35c1a7fb1bc",
+       "q_edf68a58900b9f2f",
+       "q_d3628cdf7f01e8b7"
+      ]
+     },
+     {
+      "id": "mem-9",
+      "content": "DECISION 2026-10-19 W: HOLD, kept $450,000; orders SO-4471 hold. Clauses POL-3, POL-4, POL-5, POL-10, POL-9. INV-10503 is 63 days past due, triggering POL-3 which requires holding all new orders. The current ratio of 0.74 combined with a net loss in CY2026Q2 triggers POL-5, mandating either prepayment or a limit cut of at least 25%; a 25% reduction from $600,000 yiel",
+      "relevance": 0.212,
+      "refs": [
+       "dec-6c654680",
+       "q_83d5aa6b25094deb",
+       "q_81b8512b1f6a924f",
+       "q_d770d780f41704d3",
+       "q_1aa8bffbad591b12",
+       "q_2096dbb20b860395",
+       "q_46bd2d2076fedd03"
+      ]
+     },
+     {
+      "id": "mem-6",
+      "content": "DECISION 2026-10-19 W: DECREASE, cut the limit $600,000 → $450,000; orders SO-4471 hold. Clauses POL-3, POL-4, POL-5, POL-10, POL-9. INV-10503 is 63 days past due, triggering POL-3 which requires holding all new orders. The current ratio of 0.74 combined with a net loss in CY2026Q2 triggers POL-5, mandating either prepayment or a limit cut of at least 25%; a 25% reduction from $600,000 yiel",
+      "relevance": 0.212,
+      "refs": [
+       "dec-e27ba089",
+       "q_1a2e381b8c8babd4",
+       "q_ba5a991540229c9f",
+       "q_22de56911acf3a2e",
+       "q_3a8d8092cec644e9",
+       "q_34b95782c9701271",
+       "q_929d94899051f9d5"
+      ]
+     }
+    ],
+    "conditions": [
+     {
+      "id": "POL-1",
+      "hit": false,
+      "detail": "ceiling $2,000,000 (the lower of $2,000,000 and 1% of CY2026Q2 revenue)"
+     },
+     {
+      "id": "POL-3",
+      "hit": false,
+      "detail": "oldest undisputed past due 36 days"
+     },
+     {
+      "id": "POL-4",
+      "hit": true,
+      "detail": "net loss in 3 of the last 3 quarters"
+     },
+     {
+      "id": "POL-5",
+      "hit": true,
+      "detail": "current ratio 0.74, latest quarter a loss; limit already cut $600,000 → $450,000 on 2026-10-19"
+     },
+     {
+      "id": "POL-7",
+      "hit": false,
+      "detail": "no disputes in the ledger"
+     },
+     {
+      "id": "POL-8",
+      "hit": false,
+      "detail": "no increase in the last 30 days"
+     },
+     {
+      "id": "POL-6",
+      "hit": false,
+      "detail": "not eligible: pays 14.8 days late on average (max 5); latest quarter not profitable; invoice 36 days past due (max 30)"
+     }
+    ]
+   },
+   "BBWI": {
+    "fundamentals": {
+     "ticker": "BBWI",
+     "entity": "Bath & Body Works, Inc.",
+     "revenue": {
+      "frame": "CY2026Q2",
+      "value": 1514000000,
+      "priorFrame": "CY2025Q2",
+      "prior": 1549000000,
+      "yoy": -0.022595222724338337
+     },
+     "netIncome": [
+      {
+       "frame": "CY2026Q2",
+       "value": 118000000
+      },
+      {
+       "frame": "CY2026Q1",
+       "value": 183000000
+      },
+      {
+       "frame": "CY2025Q3",
+       "value": 77000000
+      }
+     ],
+     "lossesInLast3": 0,
+     "latestProfitable": true,
+     "currentRatio": {
+      "frame": "CY2026Q2I",
+      "assets": 2050000000,
+      "liabilities": 1707000000,
+      "value": 1.200937316930287
+     },
+     "flags": [],
+     "evidence": [
+      "q_b3a3bc3920defa2a",
+      "q_31ef07c84083fff1",
+      "q_62104fda8fe59606"
+     ]
+    },
+    "ledger": {
+     "ticker": "BBWI",
+     "asOf": "2026-10-26",
+     "name": "Bath & Body Works, Inc.",
+     "termsDays": 45,
+     "erpLimit": 350000,
+     "limit": 350000,
+     "openAr": 174500,
+     "utilization": 0.49857142857142855,
+     "pastDue": [],
+     "maxDaysPastDue": 0,
+     "avgDaysLate6m": 2,
+     "disputes": [],
+     "disputedTotal": 0,
+     "pendingOrders": [],
+     "notes": [],
+     "evidence": [
+      "q_3069c780971637f5",
+      "q_2fcae193926d407b",
+      "q_ec3f5c14d51777e8"
+     ]
+    },
+    "memories": [
+     {
+      "id": "mem-17",
+      "content": "OUTCOME 2026-10-26 BBWI: kept at $350,000 on 2026-10-19; paid as agreed.",
+      "relevance": 0.321,
+      "refs": [
+       "dec-3dfc4482",
+       "q_ec5dd35c1a7fb1bc",
+       "q_edf68a58900b9f2f",
+       "q_d3628cdf7f01e8b7"
+      ]
+     },
+     {
+      "id": "mem-7",
+      "content": "DECISION 2026-10-19 BBWI: KEEP, kept $350,000. Clauses POL-10, POL-9. Limit stays at $350,000 because utilisation is 75%, below the 80% threshold required for an increase under POL-6. All other policy checks pass: no past-due invoices (POL-3), no losses in the last three quarters (POL-4), current ratio 1.20 with a profitable lat",
+      "relevance": 0.252,
+      "refs": [
+       "dec-3dfc4482",
+       "q_7012d75ef5e9d0bd",
+       "q_37b5359e267a9d50",
+       "q_14bfa48e74e9c8b8",
+       "q_7727a80626f5ab40",
+       "q_621934a65b5839c5",
+       "q_a5c1fbe5d98d6f56"
+      ]
+     }
+    ],
+    "conditions": [
+     {
+      "id": "POL-1",
+      "hit": false,
+      "detail": "ceiling $2,000,000 (the lower of $2,000,000 and 1% of CY2026Q2 revenue)"
+     },
+     {
+      "id": "POL-3",
+      "hit": false,
+      "detail": "oldest undisputed past due 0 days"
+     },
+     {
+      "id": "POL-4",
+      "hit": false,
+      "detail": "net loss in 0 of the last 3 quarters"
+     },
+     {
+      "id": "POL-5",
+      "hit": false,
+      "detail": "current ratio 1.20, latest quarter profitable"
+     },
+     {
+      "id": "POL-7",
+      "hit": false,
+      "detail": "no disputes in the ledger"
+     },
+     {
+      "id": "POL-8",
+      "hit": false,
+      "detail": "no increase in the last 30 days"
+     },
+     {
+      "id": "POL-6",
+      "hit": false,
+      "detail": "not eligible: utilisation 50% (needs 80%)"
+     }
+    ]
+   },
+   "DKS": {
+    "fundamentals": {
+     "ticker": "DKS",
+     "entity": "Dick's Sporting Goods, Inc.",
+     "revenue": {
+      "frame": "CY2026Q2",
+      "value": 5586815000,
+      "priorFrame": "CY2025Q2",
+      "prior": 3646616000,
+      "yoy": 0.5320546501194532
+     },
+     "netIncome": [
+      {
+       "frame": "CY2026Q2",
+       "value": 315461000
+      },
+      {
+       "frame": "CY2026Q1",
+       "value": 319822000
+      },
+      {
+       "frame": "CY2025Q3",
+       "value": 75212000
+      }
+     ],
+     "lossesInLast3": 0,
+     "latestProfitable": true,
+     "currentRatio": {
+      "frame": "CY2026Q2I",
+      "assets": 7319804000,
+      "liabilities": 4929225000,
+      "value": 1.484980701834467
+     },
+     "flags": [
+      "revenue up 53% year on year"
+     ],
+     "evidence": [
+      "q_b3a3bc3920defa2a",
+      "q_31ef07c84083fff1",
+      "q_62104fda8fe59606"
+     ]
+    },
+    "ledger": {
+     "ticker": "DKS",
+     "asOf": "2026-10-26",
+     "name": "Dick's Sporting Goods, Inc.",
+     "termsDays": 45,
+     "erpLimit": 500000,
+     "limit": 625000,
+     "openAr": 475000,
+     "utilization": 0.76,
+     "pastDue": [],
+     "maxDaysPastDue": 0,
+     "avgDaysLate6m": 1.7272727272727273,
+     "disputes": [],
+     "disputedTotal": 0,
+     "pendingOrders": [],
+     "notes": [
+      {
+       "date": "2026-10-15",
+       "category": "contact",
+       "note": "DKS is integrating the Foot Locker banners and asks for an $800,000 limit for Q4 fixtures."
+      }
+     ],
+     "evidence": [
+      "q_3069c780971637f5",
+      "q_2fcae193926d407b",
+      "q_ec3f5c14d51777e8"
+     ]
+    },
+    "memories": [
+     {
+      "id": "mem-18",
+      "content": "OUTCOME 2026-10-26 DKS: after the increase to $625,000 on 2026-10-19, 76% of the limit is in use and nothing is past due. Paying as agreed.",
+      "relevance": 0.308,
+      "refs": [
+       "dec-31e0c67a",
+       "q_ec5dd35c1a7fb1bc",
+       "q_edf68a58900b9f2f",
+       "q_d3628cdf7f01e8b7"
+      ]
+     },
+     {
+      "id": "mem-10",
+      "content": "APPROVAL 2026-10-19 DKS: Credit manager (demo) approved $500,000 → $625,000 (SO-4502 released): Staged increase per SN-2; review again after Q4.",
+      "relevance": 0.22,
+      "refs": [
+       "dec-31e0c67a"
+      ]
+     },
+     {
+      "id": "mem-8",
+      "content": "DECISION 2026-10-19 DKS: INCREASE, requested approval for $500,000 → $625,000; orders SO-4502 release. Clauses POL-1, POL-2, POL-6, POL-10, SN-2, POL-9. All POL-6 increase criteria are met: average payment 1.9 days late (≤5), utilisation 88% (≥80%), latest quarter profitable ($315.5M), no invoice >30 days past due, and revenue grew 53% YoY (not a decline). The desk may raise the limit by up to 25% to $625,000 ",
+      "relevance": 0.267,
+      "refs": [
+       "dec-31e0c67a",
+       "q_7012d75ef5e9d0bd",
+       "q_37b5359e267a9d50",
+       "q_14bfa48e74e9c8b8",
+       "q_7727a80626f5ab40",
+       "q_621934a65b5839c5",
+       "q_a5c1fbe5d98d6f56"
+      ]
+     }
+    ],
+    "conditions": [
+     {
+      "id": "POL-1",
+      "hit": false,
+      "detail": "ceiling $2,000,000 (the lower of $2,000,000 and 1% of CY2026Q2 revenue)"
+     },
+     {
+      "id": "POL-3",
+      "hit": false,
+      "detail": "oldest undisputed past due 0 days"
+     },
+     {
+      "id": "POL-4",
+      "hit": false,
+      "detail": "net loss in 0 of the last 3 quarters"
+     },
+     {
+      "id": "POL-5",
+      "hit": false,
+      "detail": "current ratio 1.48, latest quarter profitable"
+     },
+     {
+      "id": "POL-7",
+      "hit": false,
+      "detail": "no disputes in the ledger"
+     },
+     {
+      "id": "POL-8",
+      "hit": false,
+      "detail": "raised $500,000 → $625,000 on 2026-10-19; now 76% used, nothing past due"
+     },
+     {
+      "id": "POL-6",
+      "hit": false,
+      "detail": "not eligible: utilisation 76% (needs 80%)"
+     },
+     {
+      "id": "SN-2",
+      "hit": true,
+      "detail": "revenue +53% YoY after an acquisition: raise in stages, with approval"
+     }
+    ]
+   }
+  },
+  "recommendations": [
+   "Send notice ntc-271eec to AAP after review."
+  ],
+  "artifacts": [
+   {
+    "type": "trace",
+    "path": "logs/trace-example_4-mvnueojf.jsonl"
+   }
+  ],
+  "portfolio": {
+   "total_limits": 4625000,
+   "watch_list_limits": 450000,
+   "watch_list_share": 0.0972972972972973
+  }
+ },
+ "contract": {
+  "contractId": "5a39f2f8-f049-4e09-a678-babbfda7ac0f",
+  "intent": {
+   "primary": "portfolio_review",
+   "parameters": {
+    "text": "Run the weekly credit review",
+    "intent": "portfolio_review",
+    "tickers": [
+     "WMT",
+     "TGT",
+     "KSS",
+     "AAP",
+     "PTON",
+     "W",
+     "BBWI",
+     "DKS"
+    ],
+    "route": "act",
+    "notes": []
+   },
+   "confidence": 0.75,
+   "alternates": [
+    {
+     "id": "account_review",
+     "score": 0.25
+    }
+   ]
+  },
+  "risk": {
+   "level": "medium",
+   "flags": [],
+   "redactions": []
+  },
+  "toolPlan": [
+   {
+    "capability": "data.sql",
+    "tool": "zetaris.sql"
+   },
+   {
+    "capability": "memory.recall",
+    "tool": "hmem.query"
+   },
+   {
+    "capability": "world.case",
+    "tool": "worldmodel.case"
+   },
+   {
+    "capability": "knowledge.policy",
+    "tool": "policy.book"
+   },
+   {
+    "capability": "credit.limit.decrease",
+    "tool": "desk.limit"
+   },
+   {
+    "capability": "credit.limit.increase",
+    "tool": "desk.limit"
+   },
+   {
+    "capability": "orders.hold",
+    "tool": "desk.orders"
+   },
+   {
+    "capability": "orders.release",
+    "tool": "desk.orders"
+   },
+   {
+    "capability": "orders.prepay",
+    "tool": "desk.orders"
+   },
+   {
+    "capability": "notice.draft",
+    "tool": "desk.notice"
+   },
+   {
+    "capability": "approval.request",
+    "tool": "desk.approval"
+   },
+   {
+    "capability": "memory.store",
+    "tool": "hmem.add"
+   }
+  ],
+  "expiresAt": "2026-10-25T13:14:19.133Z",
+  "registryVersion": 1,
+  "authority": {
+   "maxAutoIncreaseUsd": 250000,
+   "maxAutoLimitUsd": 1000000,
+   "maxLimitUsd": 2000000,
+   "sendsNotices": false,
+   "claimedAuthorityAccepted": false
+  },
+  "lineage": [
+   "6d7f22ae-cce2-4ea6-bc9c-2ca6ba6f6e23",
+   "6d4e05f4-42c3-4758-ac5a-715dcfee29d2",
+   "bc61c018-ffd6-4e9b-a7a1-9d85833ef6f6",
+   "c2d2027c-c676-41a3-90db-2a268cc0a805",
+   "5a39f2f8-f049-4e09-a678-babbfda7ac0f"
+  ]
+ }
+}

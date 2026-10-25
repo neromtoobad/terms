@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE LIGHTNING DATABASE HALDEN_SYSTEMS DESCRIBE BY \"Halden Packaging internal systems, simulated, served by Terms\"",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:29:00.969Z"
+}

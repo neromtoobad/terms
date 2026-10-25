@@ -1,0 +1,66 @@
+{
+ "sql": "SELECT note_date, ticker, category, note FROM terms.collections_notes WHERE as_of = '2026-10-26' AND ticker IN ('WMT', 'TGT', 'KSS', 'AAP', 'PTON', 'W', 'BBWI', 'DKS') ORDER BY ticker, note_date",
+ "columns": [
+  "note_date",
+  "ticker",
+  "category",
+  "note"
+ ],
+ "rows": [
+  [
+   "2026-10-16",
+   "AAP",
+   "contact",
+   "AAP buyer asks for more headroom for Q4 store resets; order SO-4488 pending."
+  ],
+  [
+   "2026-10-24",
+   "AAP",
+   "promise_to_pay",
+   "AAP AP team: payment run delayed by their ERP migration; expects to pay the Sept 25 invoice by Oct 31. Buyer placed SO-4530 meanwhile."
+  ],
+  [
+   "2026-10-15",
+   "DKS",
+   "contact",
+   "DKS is integrating the Foot Locker banners and asks for an $800,000 limit for Q4 fixtures."
+  ],
+  [
+   "2026-10-10",
+   "KSS",
+   "dispute",
+   "Kohl's disputes $18,400 of the September 7 invoice: damaged pallets at the Ohio DC. Photos requested."
+  ],
+  [
+   "2026-10-24",
+   "KSS",
+   "dispute",
+   "Kohl's paid the September 7 invoice short by the disputed $18,400; dispute still open."
+  ],
+  [
+   "2026-10-12",
+   "TGT",
+   "contact",
+   "Target confirms Q4 display program volumes in line with last year."
+  ],
+  [
+   "2026-09-08",
+   "W",
+   "risk",
+   "July invoice paid 24 days late. AP contact cited a cash management review."
+  ],
+  [
+   "2026-10-14",
+   "W",
+   "contact",
+   "Wayfair AP: August and September invoices on hold pending 'cash management review'; no payment date given."
+  ],
+  [
+   "2026-10-23",
+   "W",
+   "contact",
+   "Wayfair paid the August invoice (63 days late) after the order hold was escalated. September invoice still open."
+  ]
+ ],
+ "recordedAt": "2026-10-25T13:07:37.650Z"
+}

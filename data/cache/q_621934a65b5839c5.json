@@ -1,0 +1,22 @@
+{
+ "sql": "SELECT order_id, ticker, order_date, ship_by, amount_usd, status FROM terms.orders WHERE as_of = '2026-10-19' AND ticker IN ('BBWI', 'DKS') AND status = 'awaiting_credit' ORDER BY ticker, order_id",
+ "columns": [
+  "order_id",
+  "ticker",
+  "order_date",
+  "ship_by",
+  "amount_usd",
+  "status"
+ ],
+ "rows": [
+  [
+   "SO-4502",
+   "DKS",
+   "2026-10-17",
+   "2026-10-28",
+   "180000.0",
+   "awaiting_credit"
+  ]
+ ],
+ "recordedAt": "2026-10-25T13:06:42.155Z"
+}

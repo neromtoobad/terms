@@ -1,0 +1,31 @@
+{
+ "sql": "SELECT ticker, frame, value_usd FROM terms.wmt_sec_net_income ORDER BY period_end DESC LIMIT 4",
+ "columns": [
+  "ticker",
+  "frame",
+  "value_usd"
+ ],
+ "rows": [
+  [
+   "WMT",
+   "CY2026Q2",
+   "6.366E9"
+  ],
+  [
+   "WMT",
+   "CY2026Q1",
+   "5.33E9"
+  ],
+  [
+   "WMT",
+   "CY2025",
+   "2.1893E10"
+  ],
+  [
+   "WMT",
+   "CY2025Q3",
+   "6.143E9"
+  ]
+ ],
+ "recordedAt": "2026-10-25T12:25:05.661Z"
+}

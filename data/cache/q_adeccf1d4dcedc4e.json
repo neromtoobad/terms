@@ -1,0 +1,8 @@
+{
+ "sql": "CREATE LIGHTNING REST TABLE w_revenuefromcontractwithcustomerexcludingassessedtax_raw FROM TERMS_SEC REQUEST(endpoint \"https://data.sec.gov/api/xbrl/companyconcept/CIK0001616707/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json\", method \"get\", response_type \"json\", http_encoding \"URLENCODED\") HEADER (user-agent \"Terms-hackathon-demo admin@nerom.site\") BODY ()",
+ "columns": [
+  "Result"
+ ],
+ "rows": [],
+ "recordedAt": "2026-10-25T12:29:15.455Z"
+}

@@ -1,0 +1,72 @@
+{
+ "sql": "SELECT ticker, frame, period_end, value_usd AS net_income_usd FROM terms.sec_net_income WHERE ticker IN ('KSS', 'AAP') AND length(frame) = 8 AND period_end >= '2025-01-01' AND filed <= '2026-10-19' ORDER BY ticker, period_end",
+ "columns": [
+  "ticker",
+  "frame",
+  "period_end",
+  "net_income_usd"
+ ],
+ "rows": [
+  [
+   "AAP",
+   "CY2025Q1",
+   "2025-04-19",
+   "2.4E7"
+  ],
+  [
+   "AAP",
+   "CY2025Q2",
+   "2025-07-12",
+   "1.5E7"
+  ],
+  [
+   "AAP",
+   "CY2025Q3",
+   "2025-10-04",
+   "-1000000.0"
+  ],
+  [
+   "AAP",
+   "CY2026Q1",
+   "2026-04-25",
+   "2.4E7"
+  ],
+  [
+   "AAP",
+   "CY2026Q2",
+   "2026-07-18",
+   "5.5E7"
+  ],
+  [
+   "KSS",
+   "CY2025Q1",
+   "2025-05-03",
+   "-1.5E7"
+  ],
+  [
+   "KSS",
+   "CY2025Q2",
+   "2025-08-02",
+   "1.53E8"
+  ],
+  [
+   "KSS",
+   "CY2025Q3",
+   "2025-11-01",
+   "8000000.0"
+  ],
+  [
+   "KSS",
+   "CY2026Q1",
+   "2026-05-02",
+   "-1.4E7"
+  ],
+  [
+   "KSS",
+   "CY2026Q2",
+   "2026-08-01",
+   "1.51E8"
+  ]
+ ],
+ "recordedAt": "2026-10-25T13:04:38.637Z"
+}

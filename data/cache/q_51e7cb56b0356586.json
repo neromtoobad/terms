@@ -1,0 +1,18 @@
+{
+ "sql": "SELECT note_date, ticker, category, note FROM terms.collections_notes WHERE as_of = '2026-10-19' AND ticker IN ('WMT', 'TGT') ORDER BY ticker, note_date",
+ "columns": [
+  "note_date",
+  "ticker",
+  "category",
+  "note"
+ ],
+ "rows": [
+  [
+   "2026-10-12",
+   "TGT",
+   "contact",
+   "Target confirms Q4 display program volumes in line with last year."
+  ]
+ ],
+ "recordedAt": "2026-10-25T13:03:28.174Z"
+}
